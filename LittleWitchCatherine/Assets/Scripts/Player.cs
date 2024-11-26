@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if()
+        //if()
         var input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         Debug.Log(input);
         //rbody.AddForce(input);
