@@ -5,9 +5,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float BaseSpeed = 1f;
 
     private Rigidbody2D rbody;
-    private Vector2 movement;
     private Animator animator;
+    private Vector2 movement;
 
+    private readonly float runMultiply = 1.5f;
     private readonly string HorizontalMovingValue = "HorizontalValue";
     private readonly string VerticleMovingValue = "VerticleValue";
     private readonly string IsWalking = "IsWalking";
@@ -23,44 +24,36 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //Покой
-        if (movement == Vector2.zero)
+        bool isMoving = movement != Vector2.zero;
+
+        animator.SetBool(IsWalking, isMoving);
+        //Проверка на движение
+        if (!isMoving)
         {
             animator.SetBool(IsWalking, false);
-            animator.SetBool(IsRunning, false);
+            return;
         }
-        //Движение
+        //Нормализация вектора движения
+        if (movement.magnitude > 1)
+            movement.Normalize();
+
+        float speed = BaseSpeed;
+        //Проверка на бег
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            animator.SetBool(IsRunning, true);
+            speed *= runMultiply;
+        }
         else
         {
-            //Нормализация вектора движения
-            if (movement.magnitude > 1)
-                movement.Normalize();
-
-            //Проверка на движение
-            animator.SetBool(IsWalking, true);
-            //Проверка условия на бег
-            var speed = BaseSpeed;
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                animator.SetBool(IsRunning, true);
-                speed *= 2;
-            }
-            else
-            {
-                animator.SetBool(IsRunning, false);                
-            }
-
-
-            //Установка значения движения для анимаций движения
-            animator.SetFloat(HorizontalMovingValue, movement.x);
-            animator.SetFloat(VerticleMovingValue, movement.y);
-
-            rbody.MovePosition(rbody.position + speed * Time.fixedDeltaTime * movement);
+            animator.SetBool(IsRunning, false);
         }
-    }
+        //Установка значения движения для анимаций движения
+        animator.SetFloat(HorizontalMovingValue, movement.x);
+        animator.SetFloat(VerticleMovingValue, movement.y);       
 
-    private void SetAnimatorConditions()
-    {
-
+        rbody.MovePosition(rbody.position + speed * Time.fixedDeltaTime * movement);
     }
 }
+
+
