@@ -15266,21 +15266,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueHero
       objectReference: {fileID: 0}
-    - target: {fileID: 2830803961442869822, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.53373754
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1393092
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15310,10 +15306,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4860547383926566796, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 5581efe1c42edf64db38600b473ca4c1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

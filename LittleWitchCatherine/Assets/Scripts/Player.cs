@@ -12,14 +12,14 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
-
+        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        Debug.Log(movement);
     }
     private void FixedUpdate()
-    {
+    {        
         if (movement.magnitude > 1)
             movement.Normalize();
         rbody.MovePosition(rbody.position + Speed * Time.fixedDeltaTime * movement);
+
     }
 }
