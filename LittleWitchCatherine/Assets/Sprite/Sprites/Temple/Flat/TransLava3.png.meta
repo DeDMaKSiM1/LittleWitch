@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dbcc9480a7a5eb14da7b680aa0748061
+guid: eaf9724ca736767418a5c27280b5ed2c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1280639995955917397
-    second: LavaOrange_0
+      213: 5760176295163629974
+    second: TransLava3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,11 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LavaOrange_0
+      name: TransLava3_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 16
         width: 64
         height: 31
       alignment: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: badc3e375b04a3ee0800000000000000
-      internalID: -1280639995955917397
+      spriteID: 6919adc52d140ff40800000000000000
+      internalID: 5760176295163629974
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eb7350db9d5843d46875af435ed2cec7
+    spriteID: 092c74930af9a2146a5180942ebd78b9
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LavaOrange_0: -1280639995955917397
+      TransLava3_0: 5760176295163629974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
