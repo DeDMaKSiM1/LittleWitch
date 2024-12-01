@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float BaseSpeed = 1f;
+    [SerializeField] private float BaseSpeed = 1.8f;
 
     private Rigidbody2D rbody;
     private Animator animator;
@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
         if (!isMoving)
         {
             animator.SetBool(IsWalking, false);
+            animator.SetBool(IsRunning, false);
+            if (rbody.linearVelocity != Vector2.zero)
+                rbody.linearVelocity = Vector2.zero;
             return;
         }
         //Ќормализаци€ вектора движени€
@@ -50,7 +53,7 @@ public class Player : MonoBehaviour
         }
         //”становка значени€ движени€ дл€ анимаций движени€
         animator.SetFloat(HorizontalMovingValue, movement.x);
-        animator.SetFloat(VerticleMovingValue, movement.y);       
+        animator.SetFloat(VerticleMovingValue, movement.y);
 
         rbody.MovePosition(rbody.position + speed * Time.fixedDeltaTime * movement);
     }
