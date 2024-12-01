@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rbody;
     private Animator animator;
     private Vector2 movement;
+    private CinemachineCamera cameraPosition;
 
     private readonly float runMultiply = 1.5f;
     private readonly string HorizontalMovingValue = "HorizontalValue";
@@ -17,6 +19,8 @@ public class Player : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        cameraPosition = FindFirstObjectByType<CinemachineCamera>();
+        cameraPosition.Follow = gameObject.transform;
     }
     private void Update()
     {
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour
     {
         
     }
+
     private void MovementCheck()
     {
         bool isMoving = movement != Vector2.zero;
