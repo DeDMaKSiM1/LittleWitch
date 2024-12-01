@@ -24,6 +24,15 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        MovementCheck();
+    }
+
+    public void Interact()
+    {
+        
+    }
+    private void MovementCheck()
+    {
         bool isMoving = movement != Vector2.zero;
 
         animator.SetBool(IsWalking, isMoving);
