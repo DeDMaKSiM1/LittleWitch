@@ -20,15 +20,11 @@ public class Player : MonoBehaviour
     {
         cinemaCamera = FindFirstObjectByType<CinemachineCamera>();
         cinemaCamera.Follow = transform;
-
-
     }
     private void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //Camera.main.transform.position = new Vector3(transform.position.x, transform.position.x, -11f);
-
     }
     private void Update()
     {
