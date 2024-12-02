@@ -8,19 +8,27 @@ public class Player : MonoBehaviour
     private Rigidbody2D rbody;
     private Animator animator;
     private Vector2 movement;
-    private CinemachineCamera cameraPosition;
+    private CinemachineCamera cinemaCamera;
+  
+    private const float runMultiply = 1.5f;
+    private const string HorizontalMovingValue = "HorizontalValue";
+    private const string VerticleMovingValue = "VerticleValue";
+    private const string IsWalking = "IsWalking";
+    private const string IsRunning = "IsRunning";
 
-    private readonly float runMultiply = 1.5f;
-    private readonly string HorizontalMovingValue = "HorizontalValue";
-    private readonly string VerticleMovingValue = "VerticleValue";
-    private readonly string IsWalking = "IsWalking";
-    private readonly string IsRunning = "IsRunning";
+    private void Awake()
+    {
+        cinemaCamera = FindFirstObjectByType<CinemachineCamera>();
+        cinemaCamera.Follow = transform;
+
+
+    }
     private void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        cameraPosition = FindFirstObjectByType<CinemachineCamera>();
-        cameraPosition.Follow = gameObject.transform;
+        //Camera.main.transform.position = new Vector3(transform.position.x, transform.position.x, -11f);
+
     }
     private void Update()
     {
