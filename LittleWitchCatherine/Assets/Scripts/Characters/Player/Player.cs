@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float BaseSpeed = 1.8f;
-
+    private float BaseSpeed = 1.8f;
     private Rigidbody2D rbody;
     private Animator animator;
     private Vector2 movement;
