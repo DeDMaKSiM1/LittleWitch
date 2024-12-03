@@ -87,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "n-5 \u043F\u043E\u0434 \u0434\u043E\u043C\u043E\u043C_0": 6468422321797692425
+      "n-5 \u043F\u043E\u0434 \u0434\u043E\u043C\u043E\u043C_1": -3968022799777185422
+      "n-5 \u043F\u043E\u0434 \u0434\u043E\u043C\u043E\u043C_2": -5178137089719150104
+      "n-5 \u043F\u043E\u0434 \u0434\u043E\u043C\u043E\u043C_3": 6151985271241894407
+      "n-5 \u043F\u043E\u0434 \u0434\u043E\u043C\u043E\u043C_4": 1742610688555882537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
