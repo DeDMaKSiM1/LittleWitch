@@ -127,7 +127,7 @@ TextureImporter:
         width: 184
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -140,34 +140,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: "03 \u041A\u0443\u0441\u0442 \u043D\u0430 \u043F\u043E\u0432\u043E\u0440\u043E\u0442\u0435
-        \u043A\u043A\u043E\u043B\u043E\u0434\u0446\u0443 \u0434\u0435\u043D\u044C_1"
-      rect:
-        serializedVersion: 2
-        x: 185
-        y: 42
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c01cbb6a6fc89f90800000000000000
-      internalID: -6946574369238019897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0415fb892691c684ca04694d412da668
     internalID: 0
     vertices: []
     indices: 
@@ -176,7 +153,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "03 \u041A\u0443\u0441\u0442 \u043D\u0430 \u043F\u043E\u0432\u043E\u0440\u043E\u0442\u0435 \u043A\u043A\u043E\u043B\u043E\u0434\u0446\u0443 \u0434\u0435\u043D\u044C_0": 962192114609228810
+      "03 \u041A\u0443\u0441\u0442 \u043D\u0430 \u043F\u043E\u0432\u043E\u0440\u043E\u0442\u0435 \u043A\u043A\u043E\u043B\u043E\u0434\u0446\u0443 \u0434\u0435\u043D\u044C_1": -6946574369238019897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -127,7 +127,7 @@ TextureImporter:
         width: 568
         height: 524
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -140,34 +140,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: "20 \u0441\u0430\u0434 \u0432\u0442\u043E\u0440\u043E\u0439 \u0440\u044F\u0434
-        \u0434\u0435\u043D\u044C_1"
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 14
-        width: 47
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5a64ba544a58c4c0800000000000000
-      internalID: -4267061397307495843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: af07571f14aee904cbfd95c03151c2e1
     internalID: 0
     vertices: []
     indices: 
@@ -176,7 +153,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "20 \u0441\u0430\u0434 \u0432\u0442\u043E\u0440\u043E\u0439 \u0440\u044F\u0434 \u0434\u0435\u043D\u044C_0": -873131874323938135
+      "20 \u0441\u0430\u0434 \u0432\u0442\u043E\u0440\u043E\u0439 \u0440\u044F\u0434 \u0434\u0435\u043D\u044C_1": -4267061397307495843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

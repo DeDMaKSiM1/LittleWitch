@@ -29,7 +29,6 @@ public class TransSceneData : MonoBehaviour
             CharacterPrefab = Resources.Load("Witch") as GameObject;
             spawnComponent = GetComponent<SpawnComponent>();
             spawnComponent.Spawn(CharacterPrefab, PreviousSpawnPosition.position);
-            Debug.Log("Спавн");
         }
     }
     private void Start()
