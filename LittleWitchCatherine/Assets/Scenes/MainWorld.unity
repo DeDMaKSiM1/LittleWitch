@@ -149,6 +149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 773259225}
+  - {fileID: 890885035}
   - {fileID: 832933964}
   m_Father: {fileID: 1169333623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3183,8 +3184,7 @@ Transform:
   m_LocalPosition: {x: -6.362, y: -9.867, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 890885035}
+  m_Children: []
   m_Father: {fileID: 31024506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &773259226
@@ -3436,7 +3436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &832933963
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3792,12 +3792,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890885034}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.362, y: -9.867, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 773259225}
+  m_Father: {fileID: 31024506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &890885036
 PolygonCollider2D:
@@ -4062,7 +4062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &947998797
 Transform:
   m_ObjectHideFlags: 0
@@ -5274,11 +5274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.19
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.97
+      value: -7.19
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.z
