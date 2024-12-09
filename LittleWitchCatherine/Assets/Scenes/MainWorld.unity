@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &31024506
 Transform:
   m_ObjectHideFlags: 0
@@ -3041,7 +3041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &683392649
 Transform:
   m_ObjectHideFlags: 0
@@ -3165,7 +3165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &705955894
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3935,7 +3935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &895073758
 Transform:
   m_ObjectHideFlags: 0
@@ -4059,7 +4059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &922500345
 Transform:
   m_ObjectHideFlags: 0
@@ -4131,7 +4131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &947998797
 Transform:
   m_ObjectHideFlags: 0
@@ -4325,7 +4325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1038913067
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5130,7 +5130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1262519986
 Transform:
   m_ObjectHideFlags: 0
@@ -5516,11 +5516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.19
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 3510758614310027501, guid: 0896795d5f93e6d4d9364904779c7204, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8142,7 +8142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2107003447
 Transform:
   m_ObjectHideFlags: 0
