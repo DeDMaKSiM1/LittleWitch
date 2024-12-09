@@ -831,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &160396233
 Transform:
   m_ObjectHideFlags: 0
@@ -6932,9 +6932,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590561056}
+  - component: {fileID: 1590561058}
+  - component: {fileID: 1590561057}
   m_Layer: 0
   m_Name: Upside_Sprites
-  m_TagString: Untagged
+  m_TagString: SemiTransparent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6957,6 +6959,94 @@ Transform:
   - {fileID: 1560273902}
   m_Father: {fileID: 1775395589}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1590561057
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590561055}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3.0280085, y: 3.2939625}
+      - {x: 2.529726, y: 2.777192}
+      - {x: 1.9448395, y: 3.3129542}
+      - {x: 1.0530834, y: 3.1998744}
+      - {x: 0.6044903, y: 2.6148748}
+      - {x: 0.2863264, y: 2.7536001}
+      - {x: -0.13393497, y: 2.6626914}
+      - {x: -0.54586124, y: 2.1480255}
+      - {x: -0.9136791, y: 1.3341321}
+      - {x: -0.58043295, y: 0.7946616}
+      - {x: 0.3068233, y: 0.66069686}
+      - {x: 1.0398502, y: 1.5364232}
+      - {x: 1.5351753, y: 1.4992582}
+      - {x: 1.6711407, y: 1.1071224}
+      - {x: 1.8376198, y: 1.1215026}
+      - {x: 1.8733797, y: 1.4572579}
+      - {x: 2.1584368, y: 1.963233}
+      - {x: 2.1967888, y: 1.1012201}
+      - {x: 2.8638773, y: 0.84445226}
+      - {x: 2.962904, y: 0.46501845}
+      - {x: 3.2834873, y: 0.45078313}
+      - {x: 3.3263216, y: 0.7714379}
+      - {x: 4.0019193, y: 1.3631283}
+      - {x: 4.3484526, y: 2.283729}
+      - {x: 3.7522202, y: 3.0669274}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1590561058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590561055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4dfadc30ff3ce4e932c9283e0716d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRendArray:
+  - {fileID: 316024342}
+  - {fileID: 1795121698}
+  - {fileID: 1560273903}
 --- !u!1 &1604572098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7604,7 +7694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1775395589
 Transform:
   m_ObjectHideFlags: 0
@@ -7804,9 +7894,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1831170887}
+  - component: {fileID: 1831170888}
+  - component: {fileID: 1831170889}
   m_Layer: 0
   m_Name: Leftside_Sprites
-  m_TagString: Untagged
+  m_TagString: SemiTransparent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7829,6 +7921,93 @@ Transform:
   - {fileID: 278340965}
   m_Father: {fileID: 160396233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1831170888
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831170886}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.8983116, y: 3.3228104}
+      - {x: -0.30980015, y: 3.7598906}
+      - {x: -0.8500509, y: 3.4639077}
+      - {x: -0.96698, y: 2.3405662}
+      - {x: -1.3806581, y: 1.6690755}
+      - {x: -0.8307781, y: 1.3343482}
+      - {x: -0.47791386, y: 0.72729135}
+      - {x: 0.047198176, y: 0.634763}
+      - {x: 0.31589848, y: 1.1454598}
+      - {x: 0.6508328, y: 1.3030791}
+      - {x: 0.9940014, y: 1.022059}
+      - {x: 1.1470566, y: 0.4492724}
+      - {x: 1.4912319, y: 0.45680332}
+      - {x: 1.7635269, y: 1.0674722}
+      - {x: 2.0801678, y: 1.3467528}
+      - {x: 2.6891985, y: 0.76029766}
+      - {x: 2.7084494, y: 0.21285784}
+      - {x: 3.1654644, y: 0.20998049}
+      - {x: 3.210702, y: 0.9445462}
+      - {x: 4.044359, y: 1.7669134}
+      - {x: 4.0000906, y: 3.0804403}
+      - {x: 3.1781368, y: 3.7316208}
+      - {x: 2.451435, y: 3.726329}
+      - {x: 1.119442, y: 3.5614066}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1831170889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831170886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4dfadc30ff3ce4e932c9283e0716d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRendArray:
+  - {fileID: 846513979}
+  - {fileID: 478320259}
+  - {fileID: 278340964}
 --- !u!1 &1855371706
 GameObject:
   m_ObjectHideFlags: 0

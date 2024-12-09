@@ -10,12 +10,6 @@ public class TransparentCheckTrigger : MonoBehaviour
             transparent.SetSemiTransparent();
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("SemiTransparent"))
-        {
-            var transparent = collision.GetComponent<TransparentComponent>();
-            transparent.SetNonTransparent();
-        }
-    }
+
+
 }
