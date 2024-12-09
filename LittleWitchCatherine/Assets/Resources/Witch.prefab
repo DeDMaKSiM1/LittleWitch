@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6495439101779602531}
   - component: {fileID: 8138974933184047664}
   - component: {fileID: 6440363742918889069}
+  - component: {fileID: 4749325827845028840}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Player
@@ -188,3 +189,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4749325827845028840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423362945975684797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f9989cc332ef841b42285ac0cc3f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 135974403, guid: 1ddc7446256489644b743d836fd488f4, type: 3}
