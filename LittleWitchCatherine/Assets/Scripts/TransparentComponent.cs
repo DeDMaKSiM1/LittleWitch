@@ -5,62 +5,44 @@ public class TransparentComponent : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer[] spriteRendArray;
 
-    private bool IsPlayerExit;
-    private bool IsRoutineWorking;
+    private float currentValue = 1f;
+
     private const float maxValue = 1f;
     private const float minValue = 0.5f;
     public void SetSemiTransparent()
     {
-        if (!IsRoutineWorking)
-            StartCoroutine(TransporancyIncreasing());
-
+        //остановка других корутин, чтобы избежать багов с мерцанием спрайта, багов при одновременном включении двух корутин 
+        StopAllCoroutines();
+        StartCoroutine(TransporancyIncreasing());
     }
     public void SetNonTransparent()
     {
-        if (!IsRoutineWorking)
-            StartCoroutine(TransporancyDecreasing());
+        StopAllCoroutines();
+        StartCoroutine(TransporancyDecreasing());
     }
 
     private IEnumerator TransporancyDecreasing()
     {
-        IsRoutineWorking = true;
-        for (float i = minValue; i <= maxValue;)
+        for (; currentValue < maxValue;)
         {
-            i += 0.05f;
+            currentValue += 0.05f;
             for (int j = 0; j < spriteRendArray.Length; j++)
             {
-                spriteRendArray[j].color = new Color(1f, 1f, 1f, i);
+                spriteRendArray[j].color = new Color(1f, 1f, 1f, currentValue);
             }
             yield return new WaitForSeconds(0.05f);
         }
-        if (IsPlayerExit)
-            SetNonTransparent();
-        else
-            IsRoutineWorking = false;
-        Debug.Log($"IsRoutineWorking = {IsRoutineWorking}");
-        Debug.Log($"IsPlayerExit = {IsPlayerExit}");
     }
     private IEnumerator TransporancyIncreasing()
     {
-        IsRoutineWorking = true;
-        for (float i = maxValue; i > minValue; i -= 0.05f)
+        //”величение прозрачности, текущее«начение не хардкодитс€ ни к min, ни к max
+        for (; currentValue > minValue; currentValue -= 0.05f)
         {
             for (int j = 0; j < spriteRendArray.Length; j++)
             {
-                spriteRendArray[j].color = new Color(1f, 1f, 1f, i);
+                spriteRendArray[j].color = new Color(1f, 1f, 1f, currentValue);
             }
             yield return new WaitForSeconds(0.05f);
-        }
-        IsRoutineWorking = false;
-        IsPlayerExit = false;
-        Debug.Log($"IsRoutineWorking = {IsRoutineWorking}");
-        Debug.Log($"IsPlayerExit = {IsPlayerExit}");
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            IsPlayerExit = true;
         }
     }
 }
