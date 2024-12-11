@@ -4,11 +4,10 @@ using UnityEngine;
 public class TransparentComponent : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer[] spriteRendArray;
-
+    [SerializeField] private float minValue = 0.5f;
     private float currentValue = 1f;
 
     private const float maxValue = 1f;
-    private const float minValue = 0.5f;
     public void SetSemiTransparent()
     {
         //остановка других корутин, чтобы избежать багов с мерцанием спрайта, багов при одновременном включении двух корутин 
