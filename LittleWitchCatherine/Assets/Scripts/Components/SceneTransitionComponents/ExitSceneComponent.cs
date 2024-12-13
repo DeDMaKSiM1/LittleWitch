@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitScene : MonoBehaviour
+public class ExitSceneComponent : MonoBehaviour
 {
     [SerializeField] private SceneNames SceneName;
     public void Exit()

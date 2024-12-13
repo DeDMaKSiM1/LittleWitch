@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class TransSceneData : MonoBehaviour
+public class TransSceneDataComponent : MonoBehaviour
 {
     [SerializeField] private Transform previousSpawnPosition;
     public bool IsFirstInstance { get; private set; } = true;
     public SpawnComponent spawnComponent { get; private set; }
     public GameObject CharacterPrefab { get; private set; }
-    public static TransSceneData Instance { get; private set; }
+    public static TransSceneDataComponent Instance { get; private set; }
     public Transform PreviousSpawnPosition {
         get => previousSpawnPosition;
         private set
