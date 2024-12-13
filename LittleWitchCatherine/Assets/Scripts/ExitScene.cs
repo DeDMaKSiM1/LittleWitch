@@ -3,10 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class ExitScene : MonoBehaviour
 {
-    [SerializeField] private string SceneName;
-
+    [SerializeField] private SceneNames SceneName;
     public void Exit()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(SceneName.ToString());
     }
 }
