@@ -8,6 +8,4 @@ public class InitializationComponent : MonoBehaviour
         changer = GetComponent<QuestViewChangerComponent>();
         changer.ChangeView();
     }
-
-
 }
