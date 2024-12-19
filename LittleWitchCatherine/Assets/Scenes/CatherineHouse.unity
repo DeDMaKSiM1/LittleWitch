@@ -13673,6 +13673,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8900399220278019502, guid: 6c671642bdd1ba448a35042b7fa49d8a, type: 3}
+      propertyPath: LocationNameToTransfer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class QuestViewChangerComponent : MonoBehaviour
 {
-    void Start()
+    [SerializeField] private Transform parentTransform;
+    public void ChangeView()
     {
         var initialSceneName = PlayerPrefs.GetString("LocationName");
-        var locationPrefab = Resources.Load($"QuestViewSprites/{initialSceneName}") as GameObject ;
-        Instantiate(locationPrefab);
+        var locationPrefab = Resources.Load($"QuestViewLocation/{initialSceneName}") as GameObject;
+        Instantiate(locationPrefab, parentTransform);
     }
-
-
 }

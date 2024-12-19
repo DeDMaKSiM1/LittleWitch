@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EntryTriggerLocationDataComponent : MonoBehaviour
 {
-    [SerializeField] private LocationNames LocationNameToTransfer;
+    [SerializeField] private CatherineHouseLocationNames LocationNameToTransfer;
     public void SetScenePrefsData()
     { 
         PlayerPrefs.SetString("LocationName", LocationNameToTransfer.ToString());
