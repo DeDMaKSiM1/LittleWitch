@@ -1,47 +1,87 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TransparentComponent : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer[] spriteRendArray;
     [SerializeField] private float minValue = 0.5f;
+    [SerializeField] private float stepValue = 0.05f;
+    [SerializeField] private float stepTime = 0.05f;
+    [SerializeField] private float pauseTime = 0.5f;
+    [SerializeField] private SpriteRenderer[] spriteRendArray;
+
     private float currentValue = 1f;
 
     private const float maxValue = 1f;
-    public void SetSemiTransparent()
+
+    public void SetTransparent()
     {
         //остановка других корутин, чтобы избежать багов с мерцанием спрайта, багов при одновременном включении двух корутин 
         StopAllCoroutines();
-        StartCoroutine(TransporancyIncreasing());
+        StartCoroutine(ToTransparent());
     }
-    public void SetNonTransparent()
+    public void SetOpaque()
     {
         StopAllCoroutines();
-        StartCoroutine(TransporancyDecreasing());
+        StartCoroutine(ToOpaque());
     }
 
-    private IEnumerator TransporancyDecreasing()
+    public void SetCycleToOpaqueAndBack()
+    {
+        StopAllCoroutines();
+        StartCoroutine(FromTransparentToOpaqueAndBack());
+    }
+    private IEnumerator ToOpaque()
     {
         for (; currentValue < maxValue;)
         {
-            currentValue += 0.05f;
+            currentValue += stepValue;
             for (int j = 0; j < spriteRendArray.Length; j++)
             {
                 spriteRendArray[j].color = new Color(1f, 1f, 1f, currentValue);
             }
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(stepTime);
         }
     }
-    private IEnumerator TransporancyIncreasing()
+    private IEnumerator ToTransparent()
     {
         //”величение прозрачности, текущее«начение не хардкодитс€ ни к min, ни к max
-        for (; currentValue > minValue; currentValue -= 0.05f)
+        for (; currentValue > minValue; currentValue -= stepValue)
         {
             for (int j = 0; j < spriteRendArray.Length; j++)
             {
                 spriteRendArray[j].color = new Color(1f, 1f, 1f, currentValue);
             }
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(stepTime);
         }
+    }
+    private IEnumerator FromTransparentToOpaqueAndBack()
+    {
+        float value = 0;
+        //”меньшение прозрачности
+        //делаю +stepValue потому что при арифм. операци€х возникает погрешность и из-за нее не достигаютс€ предельные(0 и 1) состо€ни€ прозрачности
+        for (; value < maxValue + stepValue; value += stepValue)
+        {
+            Debug.Log(value);
+            for (int j = 0; j < spriteRendArray.Length; j++)
+            {
+                spriteRendArray[j].color = new Color(spriteRendArray[j].color.r, spriteRendArray[j].color.g, spriteRendArray[j].color.b, value);
+            }
+            yield return new WaitForSeconds(stepTime);
+        }
+        //ѕауза
+        yield return new WaitForSeconds(pauseTime);
+        //”величение прозрачности 
+        for (; value >= minValue - stepValue; value -= stepValue)
+        {
+            Debug.Log(value);
+
+            for (int j = 0; j < spriteRendArray.Length; j++)
+            {
+                spriteRendArray[j].color = new Color(spriteRendArray[j].color.r, spriteRendArray[j].color.g, spriteRendArray[j].color.b, value);
+            }
+            yield return new WaitForSeconds(stepTime);
+        }
+
     }
 }

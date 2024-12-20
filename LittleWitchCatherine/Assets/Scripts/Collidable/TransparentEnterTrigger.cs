@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class TransparentCheckTrigger : MonoBehaviour
+public class TransparentEnterTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("SemiTransparent"))
         {
             var transparent = collision.GetComponent<TransparentComponent>();
-            transparent.SetSemiTransparent();
+            transparent.SetTransparent();
         }
     }
 
@@ -16,7 +16,7 @@ public class TransparentCheckTrigger : MonoBehaviour
         if (collision.CompareTag("SemiTransparent"))
         {
             var transparent = collision.GetComponent<TransparentComponent>();
-            transparent.SetNonTransparent();
+            transparent.SetOpaque();
         }
     }
 
