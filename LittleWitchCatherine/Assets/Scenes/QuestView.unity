@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 1530405651}
   - component: {fileID: 1530405650}
   m_Layer: 0
-  m_Name: Overlapping_Image
+  m_Name: TransitionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,6 +346,18 @@ MonoBehaviour:
   OnEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 658004442}
+        m_TargetAssemblyTypeName: DestroyComponentManager, Assembly-CSharp
+        m_MethodName: FindAndDestroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1104646591}
         m_TargetAssemblyTypeName: QuestViewChangerComponent, Assembly-CSharp
         m_MethodName: ChangeView
@@ -464,69 +476,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templateSprite: {fileID: 1530405647}
---- !u!1001 &2142630998
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2168269484694772987, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7132937731223879731, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
-      propertyPath: m_Name
-      value: Corridor
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 00e9b9372ae45dc4f8f812404c554b8c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1962712614}
   - {fileID: 1530405648}
-  - {fileID: 2142630998}
   - {fileID: 658004443}
   - {fileID: 1104646592}
