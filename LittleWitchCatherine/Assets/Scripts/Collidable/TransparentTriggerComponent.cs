@@ -11,6 +11,5 @@ public class TransparentTriggerComponent : MonoBehaviour
     }
     public void ToLaunchTrigger()
     {
-        transparentComponent.SetCycleToOpaqueAndBack();
     }
 }

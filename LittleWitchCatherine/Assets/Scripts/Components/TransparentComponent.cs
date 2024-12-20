@@ -7,7 +7,6 @@ public class TransparentComponent : MonoBehaviour
     [SerializeField] private float minValue = 0.5f;
     [SerializeField] private float stepValue = 0.05f;
     [SerializeField] private float stepTime = 0.05f;
-    [SerializeField] private float pauseTime = 0.5f;
     [SerializeField] private SpriteRenderer[] spriteRendArray;
 
     private float currentValue = 1f;
@@ -26,11 +25,7 @@ public class TransparentComponent : MonoBehaviour
         StartCoroutine(ToOpaque());
     }
 
-    public void SetCycleToOpaqueAndBack()
-    {
-        StopAllCoroutines();
-        StartCoroutine(FromTransparentToOpaqueAndBack());
-    }
+
     private IEnumerator ToOpaque()
     {
         for (; currentValue < maxValue;)
@@ -55,33 +50,5 @@ public class TransparentComponent : MonoBehaviour
             yield return new WaitForSeconds(stepTime);
         }
     }
-    private IEnumerator FromTransparentToOpaqueAndBack()
-    {
-        float value = 0;
-        //Уменьшение прозрачности
-        //делаю +stepValue потому что при арифм. операциях возникает погрешность и из-за нее не достигаются предельные(0 и 1) состояния прозрачности
-        for (; value < maxValue + stepValue; value += stepValue)
-        {
-            Debug.Log(value);
-            for (int j = 0; j < spriteRendArray.Length; j++)
-            {
-                spriteRendArray[j].color = new Color(spriteRendArray[j].color.r, spriteRendArray[j].color.g, spriteRendArray[j].color.b, value);
-            }
-            yield return new WaitForSeconds(stepTime);
-        }
-        //Пауза
-        yield return new WaitForSeconds(pauseTime);
-        //Увеличение прозрачности 
-        for (; value >= minValue - stepValue; value -= stepValue)
-        {
-            Debug.Log(value);
-
-            for (int j = 0; j < spriteRendArray.Length; j++)
-            {
-                spriteRendArray[j].color = new Color(spriteRendArray[j].color.r, spriteRendArray[j].color.g, spriteRendArray[j].color.b, value);
-            }
-            yield return new WaitForSeconds(stepTime);
-        }
-
-    }
+    
 }
