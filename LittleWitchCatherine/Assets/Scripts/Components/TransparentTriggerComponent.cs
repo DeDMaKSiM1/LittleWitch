@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class TransparentTriggerComponent : MonoBehaviour
 {
-    private Animator animator;
+    protected Animator animator;
 
-    private const string TransitionTrigger = "TransitionCycle";
-    private void Start()
+    protected const string TransitionTrigger = "TransitionCycle";
+    protected void Awake()
     {
         var overlappingImage = GameObject.Find("TransitionManager");
         animator = overlappingImage.GetComponent<Animator>();

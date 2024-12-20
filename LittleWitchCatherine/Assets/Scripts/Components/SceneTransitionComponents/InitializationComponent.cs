@@ -1,11 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InitializationComponent : MonoBehaviour
 {
-    private QuestViewChangerComponent changer;
+    public UnityEvent OnStart;
     void Start()
     {
-        changer = GetComponent<QuestViewChangerComponent>();
-        changer.ChangeView();
+        OnStart.Invoke();
     }
 }
