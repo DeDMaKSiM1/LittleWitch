@@ -956,8 +956,8 @@ GameObject:
   m_Component:
   - component: {fileID: 181989104}
   - component: {fileID: 181989103}
-  - component: {fileID: 181989102}
   - component: {fileID: 181989101}
+  - component: {fileID: 181989102}
   - component: {fileID: 181989100}
   m_Layer: 0
   m_Name: TransitionManager
