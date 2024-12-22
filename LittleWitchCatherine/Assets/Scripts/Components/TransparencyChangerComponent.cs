@@ -9,20 +9,21 @@ public class TransparencyChangerComponent : MonoBehaviour, IFadeable
     [SerializeField] private float stepTime = 0.05f;
     [SerializeField] private SpriteRenderer[] spriteRendArray;
 
+    private Coroutine MyCoroutine;
     private float currentValue = 1f;
 
     private const float maxValue = 1f;
 
     public void FadeOut()
     {
-        //остановка других корутин, чтобы избежать багов с мерцанием спрайта, багов при одновременном включении двух корутин 
-        StopAllCoroutines();
-        StartCoroutine(FadeOutProcces());
+        //остановка других корутин, чтобы избежать багов с мерцанием спрайта, багов при одновременном включении двух корутин
+        StopCoroutine();
+        MyCoroutine = StartCoroutine(FadeOutProcces());
     }
     public void UnFade()
     {
-        StopAllCoroutines();
-        StartCoroutine(UnFadeProcces());
+        StopCoroutine();
+        MyCoroutine = StartCoroutine(UnFadeProcces());
     }
     private IEnumerator UnFadeProcces()
     {
@@ -47,5 +48,12 @@ public class TransparencyChangerComponent : MonoBehaviour, IFadeable
             }
             yield return new WaitForSeconds(stepTime);
         }
-    }    
+    }
+    private void StopCoroutine()
+    {
+        if (MyCoroutine == null)
+            return;
+        StopCoroutine(MyCoroutine);
+        MyCoroutine = null;
+    }
 }
