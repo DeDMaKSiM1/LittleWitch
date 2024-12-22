@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5373333652128778326}
-  - component: {fileID: 7620175342609075310}
   - component: {fileID: 279325242632945542}
+  - component: {fileID: 8301420372122368943}
   m_Layer: 0
   m_Name: Transparent_Collider
   m_TagString: SemiTransparent
@@ -33,21 +33,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7620175342609075310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6818369160983645211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4dfadc30ff3ce4e932c9283e0716d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRendArray:
-  - {fileID: 0}
-  minValue: 0.5
 --- !u!60 &279325242632945542
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -129,3 +114,19 @@ PolygonCollider2D:
       - {x: 1.6140056, y: 0.2984619}
       - {x: 0.82594347, y: 0.9971389}
   m_UseDelaunayMesh: 0
+--- !u!114 &8301420372122368943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818369160983645211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0ded7d049cd8a4ba743b8f98f9eea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minValue: 0.5
+  stepValue: 0.05
+  stepTime: 0.05
+  spriteRendArray: []

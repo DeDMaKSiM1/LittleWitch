@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class FadeOnPlayerEnter : MonoBehaviour, IFadeable
+public class TransparencyChangerComponent : MonoBehaviour, IFadeable
 {
     [SerializeField] private float minValue = 0.5f;
     [SerializeField] private float stepValue = 0.05f;
