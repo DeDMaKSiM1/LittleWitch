@@ -6,8 +6,8 @@ public class TransparentEnterTrigger : MonoBehaviour
     {
         if (collision.CompareTag("SemiTransparent"))
         {
-            var transparent = collision.GetComponent<TransparentComponent>();
-            transparent.SetTransparent();
+            var transparent = collision.GetComponent<FadeOnPlayerEnter>();
+            transparent.FadeOut();
         }
     }
 
@@ -15,8 +15,8 @@ public class TransparentEnterTrigger : MonoBehaviour
     {
         if (collision.CompareTag("SemiTransparent"))
         {
-            var transparent = collision.GetComponent<TransparentComponent>();
-            transparent.SetOpaque();
+            var transparent = collision.GetComponent<FadeOnPlayerEnter>();
+            transparent.UnFade();
         }
     }
 

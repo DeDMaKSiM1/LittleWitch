@@ -7345,6 +7345,7 @@ MonoBehaviour:
   - {fileID: 1956152272}
   - {fileID: 1179324026}
   - {fileID: 179431870}
+  currentValue: 1
 --- !u!4 &1158601882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5373333652128778326, guid: 0a75078c4f1ea4349b5d3f428f66256f, type: 3}

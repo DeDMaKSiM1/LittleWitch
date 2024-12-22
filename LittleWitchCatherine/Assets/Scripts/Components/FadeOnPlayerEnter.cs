@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TransparentComponent : MonoBehaviour
+public class FadeOnPlayerEnter : MonoBehaviour, IFadeable
 {
     [SerializeField] private float minValue = 0.5f;
     [SerializeField] private float stepValue = 0.05f;
@@ -13,20 +13,18 @@ public class TransparentComponent : MonoBehaviour
 
     private const float maxValue = 1f;
 
-    public void SetTransparent()
+    public void FadeOut()
     {
         //остановка других корутин, чтобы избежать багов с мерцанием спрайта, багов при одновременном включении двух корутин 
         StopAllCoroutines();
-        StartCoroutine(ToTransparent());
+        StartCoroutine(FadeOutProcces());
     }
-    public void SetOpaque()
+    public void UnFade()
     {
         StopAllCoroutines();
-        StartCoroutine(ToOpaque());
+        StartCoroutine(UnFadeProcces());
     }
-
-
-    private IEnumerator ToOpaque()
+    private IEnumerator UnFadeProcces()
     {
         for (; currentValue < maxValue;)
         {
@@ -38,7 +36,7 @@ public class TransparentComponent : MonoBehaviour
             yield return new WaitForSeconds(stepTime);
         }
     }
-    private IEnumerator ToTransparent()
+    private IEnumerator FadeOutProcces()
     {
         //”величение прозрачности, текущее«начение не хардкодитс€ ни к min, ни к max
         for (; currentValue > minValue; currentValue -= stepValue)
@@ -49,6 +47,5 @@ public class TransparentComponent : MonoBehaviour
             }
             yield return new WaitForSeconds(stepTime);
         }
-    }
-    
+    }    
 }
